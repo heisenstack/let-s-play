@@ -13,7 +13,7 @@ public class UserController {
 
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)
-    public User registerUser(@RequestBody RegisterRequest registerRequest) {
-        // return userService.registerUser(registerRequest);
+    public UserDto registerUser(@RequestBody RegisterRequest registerRequest) {
+        return userService.registerUser(registerRequest);
     }
 }
