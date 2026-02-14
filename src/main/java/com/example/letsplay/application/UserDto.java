@@ -1,4 +1,4 @@
-package com.example.letsplay.application.dto;
+package com.example.letsplay.application;
 
 import lombok.AllArgsConstructor; 
 import lombok.Data;
