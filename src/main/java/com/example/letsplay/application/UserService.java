@@ -22,4 +22,9 @@ public class UserService {
 
         return new UserDto(savedUser.getId(), savedUser.getUsername(), savedUser.getEmail());
     }
+    public UserDto findUserByUsername(String username) {
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> new IllegalArgumentException("User not found"));
+        return new UserDto(user.getId(), user.getUsername(), user.getEmail());
+    }
 }
