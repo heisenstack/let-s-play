@@ -20,6 +20,6 @@ public class UserService {
 
         User savedUser = userRepository.save(user);
 
-        return new UserDto(savedUser.getId(), savedUser.getUsername());
+        return new UserDto(savedUser.getId(), savedUser.getUsername(), savedUser.getEmail());
     }
 }
