@@ -1,4 +1,6 @@
 package com.example.letsplay.application;
+import com.example.letsplay.domain.User;
+import com.example.letsplay.domain.UserRepository;
 
 public class UserService {
     private final UserRepository userRepository;
