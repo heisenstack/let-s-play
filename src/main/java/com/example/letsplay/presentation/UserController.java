@@ -1,10 +1,13 @@
 package com.example.letsplay.presentation;
 
+import java.security.Principal;
+
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.example.letsplay.application.RegisterRequest;
-import com.example.letsplay.domain.User;
+// import com.example.letsplay.domain.User;
 import com.example.letsplay.application.UserDto;
 import com.example.letsplay.application.UserService;
 
@@ -22,4 +25,11 @@ public class UserController {
     public UserDto registerUser(@RequestBody RegisterRequest registerRequest) {
         return userService.registerUser(registerRequest);
     }
+
+    @GetMapping("/me")
+    public ResponseEntity<UserDto> getCurrentUser(Principal principal) {
+        UserDto user = userService.findUserByUsername(principal.getName());
+        return ResponseEntity.ok(user);
+    }
+
 }
