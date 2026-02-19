@@ -1,6 +1,5 @@
 package com.example.letsplay.model;
 
-
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -18,5 +17,5 @@ public class Product {
 
     private Double price;
 
-    private String userId; 
+    private String userId;
 }
