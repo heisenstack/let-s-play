@@ -1,6 +1,7 @@
 package com.example.letsplay.dto;
 
 import lombok.Data;
+import java.time.LocalDateTime;
 
 @Data
 public class ProductResponse {
@@ -9,4 +10,7 @@ public class ProductResponse {
     private String description;
     private Double price;
     private String userId;
+    private String author;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }
