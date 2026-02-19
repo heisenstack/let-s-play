@@ -4,6 +4,7 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.index.Indexed;
+import java.time.LocalDateTime;
 
 @Data
 @Document(collection = "users")
@@ -19,5 +20,10 @@ public class User {
 
     private String password;
 
-    private String role;
+    private String role; 
+
+    private boolean isActive = true;
+
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 }
